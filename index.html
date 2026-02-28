@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Tool</title>
+</head>
+<body>
+
+<h2>图片处理小工具你好</h2>
+
+<input type="file" id="upload">
+<br><br>
+<img id="preview" width="300">
+
+<script>
+document.getElementById("upload").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        document.getElementById("preview").src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+});
+</script>
+
+</body>
+</html>
