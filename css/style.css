@@ -1,0 +1,29 @@
+
+/* 给body加基础样式，避免默认边距干扰 */
+body {
+  margin: 0;
+  padding: 20px; /* 整个页面内容离浏览器边缘20px */
+  text-align: center;
+}
+
+/* 第一段样式 */
+.p1 {
+  margin: 30px auto 0;
+  padding: 15px;
+  width: 500px;
+  background: #f0f0f0;
+  color: rgb(0, 0, 0);
+}
+
+.p2{
+  margin: 30px auto 0;
+  padding: 15px;
+  width: 500px;
+  background: #f0f0f0;
+  color: rgb(0, 0, 0);
+}   
+
+h2 {
+  color: rgb(255, 0, 0); /* 文字变红 */
+  text-align: center;
+}

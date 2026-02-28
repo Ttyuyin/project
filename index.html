@@ -2,27 +2,23 @@
 <html>
 <head>
     <title>Image Tool</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-
 <h2>图片上传工具</h2>
-<br/>
-<h3><a href="https://example.org">点击跳转到详情界面</a></h1>
-
-<input type="file" id="upload">
-<br><br>
-<img id="preview" width="300">
-
-<script>
-document.getElementById("upload").addEventListener("change", function(event) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        document.getElementById("preview").src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-});
-</script>
+<p class="p1">
+    这是一段文本但是要去换行<br>
+    this is a text<br>
+    maybe you can learn english well<br>
+    <a href="https://www.bilibili.com/">点击跳转到B站</a>
+</p>
+<p class="p2">
+    this is second graph<br>
+    do you know why i make this codes?<br>
+    i don't know also <br>
+</p>
 
 </body>
+
 </html>
