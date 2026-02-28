@@ -1,29 +1,70 @@
-
-/* 给body加基础样式，避免默认边距干扰 */
+/* 重置body默认样式，消除浏览器自带边距干扰 */
 body {
-  margin: 0;
-  padding: 20px; /* 整个页面内容离浏览器边缘20px */
-  text-align: center;
+    margin: 0;
+    padding: 20px; /* 整个页面离浏览器边缘20px */
+    font-family: Arial, "微软雅黑", sans-serif; /* 通用字体，适配不同系统 */
 }
 
-/* 第一段样式 */
-.p1 {
-  margin: 30px auto 0;
-  padding: 15px;
-  width: 500px;
-  background: #f0f0f0;
-  color: rgb(0, 0, 0);
-}
-
-.p2{
-  margin: 30px auto 0;
-  padding: 15px;
-  width: 500px;
-  background: #f0f0f0;
-  color: rgb(0, 0, 0);
-}   
-
+/* 标题h2样式：居中+美观 */
 h2 {
-  color: rgb(255, 0, 0); /* 文字变红 */
-  text-align: center;
+    color: rgb(153, 0, 255); /* 紫色文字（你之前用的颜色） */
+    text-align: center; /* 标题居中 */
+    margin: 0 0 30px 0; /* 标题底部留30px间距，和下方容器分开 */
+    font-size: 24px;
+}
+
+/* 核心：三栏布局的总容器 */
+.container {
+    display: flex; /* 开启Flex布局，让left/main/right横向排列 */
+    align-items: flex-start; /* 三栏顶部对齐（更符合常规排版） */
+    gap: 20px; /* 三栏之间的间距（替代margin，更简洁） */
+    text-align: center;
+}
+
+/* 左侧栏样式：固定宽度+浅灰背景 */
+.left {
+    width: 150px; /* 固定宽度，保证对称 */
+    padding: 15px;
+    background-color: #f5f5f5; /* 浅灰背景，区分区域 */
+    border-radius: 4px; /* 轻微圆角，更美观 */
+}
+
+/* 右侧栏样式：和左侧完全对称 */
+.right {
+    width: 150px; /* 和左侧宽度一致，保证对称 */
+    padding: 15px;
+    background-color: #f5f5f5; /* 和左侧背景一致 */
+    border-radius: 4px;
+}
+
+/* 中间主体：自适应剩余宽度 */
+.main {
+    flex: 1; /* 核心：占满左右侧栏之外的所有宽度 */
+    padding: 20px;
+    background-color: #fff; /* 白色背景 */
+    border: 1px solid #eee; /* 轻微边框，区分区域 */
+    border-radius: 4px;
+}
+
+/* 中间p1段落样式：自定义样式 */
+.main .p1 {
+    color: #333; /* 深灰色文字 */
+    line-height: 1.8; /* 行高，提升可读性 */
+    margin: 0 0 20px 0; /* 底部留20px间距，和p2分开 */
+}
+
+/* 中间p2段落样式：自定义样式 */
+.main .p2 {
+    color: #666; /* 中灰色文字 */
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* 链接样式：美化B站链接 */
+.main .p1 a {
+    color: rgb(153, 0, 255); /* 和标题同色 */
+    text-decoration: none; /* 去掉默认下划线 */
+}
+.main .p1 a:hover {
+    text-decoration: underline; /* 鼠标悬浮时加下划线，提升交互 */
 }
