@@ -1,0 +1,1 @@
+print("nihao zhege shijie ")
