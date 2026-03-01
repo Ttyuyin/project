@@ -13,20 +13,23 @@ h2 {
     font-size: 24px;
 }
 
-/* 核心：三栏布局的总容器 */
-.container {
-    display: flex; /* 开启Flex布局，让left/main/right横向排列 */
-    align-items: flex-start; /* 三栏顶部对齐（更符合常规排版） */
-    gap: 20px; /* 三栏之间的间距（替代margin，更简洁） */
+#time{
     text-align: center;
+    font-size: 36px;
+    color: hotpink;
 }
 
-/* 左侧栏样式：固定宽度+浅灰背景 */
+.container {
+    display: flex; 
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
 .left {
-    width: 150px; /* 固定宽度，保证对称 */
+    width: 150px; 
     padding: 15px;
-    background-color: #f5f5f5; /* 浅灰背景，区分区域 */
-    border-radius: 4px; /* 轻微圆角，更美观 */
+    background-color: #f5f5f5; 
+    border-radius: 4px; 
 }
 
 /* 右侧栏样式：和左侧完全对称 */
@@ -48,6 +51,7 @@ h2 {
 
 /* 中间p1段落样式：自定义样式 */
 .main .p1 {
+    text-indent: 2em;
     color: #333; /* 深灰色文字 */
     line-height: 1.8; /* 行高，提升可读性 */
     margin: 0 0 20px 0; /* 底部留20px间距，和p2分开 */
@@ -55,16 +59,12 @@ h2 {
 
 /* 中间p2段落样式：自定义样式 */
 .main .p2 {
+    text-indent: 2em;
     color: #666; /* 中灰色文字 */
     line-height: 1.8;
     margin: 0;
 }
 
-/* 链接样式：美化B站链接 */
-.main .p1 a {
-    color: rgb(153, 0, 255); /* 和标题同色 */
-    text-decoration: none; /* 去掉默认下划线 */
-}
-.main .p1 a:hover {
-    text-decoration: underline; /* 鼠标悬浮时加下划线，提升交互 */
+.main h2{
+    font-size: 36px;
 }
